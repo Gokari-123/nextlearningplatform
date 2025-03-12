@@ -30,7 +30,7 @@ public class FeeController {
         return feeServices.saveFee(fee);
     }
 
-    @DeleteMapping
+    @DeleteMapping("/{id}")
     public void deleteFee(Long id){
         feeServices.deleteFee(id);
     }

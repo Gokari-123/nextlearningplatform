@@ -29,8 +29,8 @@ public class CourseController {
         return courseServices.saveCourse(course);
     }
 
-    @DeleteMapping
-    public void deleteCourse(Long id){
+    @DeleteMapping("{/id}")
+    public void deleteCourse(@PathVariable Long id){
         courseServices.deleteCourse(id);
     }
 

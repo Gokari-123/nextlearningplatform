@@ -29,8 +29,8 @@ public class LibraryController {
         return libraryServices.saveLibrary(library);
     }
 
-    @DeleteMapping
-    public void deleteLibrary(Long id){
+    @DeleteMapping("{/id}")
+    public void deleteLibrary(@PathVariable Long id){
         libraryServices.deleteLibrary(id);
     }
 }

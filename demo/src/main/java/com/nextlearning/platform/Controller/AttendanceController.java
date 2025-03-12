@@ -31,8 +31,8 @@ public class AttendanceController {
         return attendanceServices.saveAttendance(attendance);
     }
 
-    @DeleteMapping
-    public void deleteAttendance(Long id){
+    @DeleteMapping("/{id}")
+    public void deleteAttendance(@PathVariable Long id){
         attendanceServices.deleteAttendance(id);
     }
 }
